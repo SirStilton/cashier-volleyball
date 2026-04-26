@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login – TSV</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy:  #0d1b3e;
+      --gold:  #e8c84a;
+      --bg:    #f2f2f2;
+      --white: #ffffff;
+      --text:  #1a1a1a;
+      --muted: #777;
+      --border:#e0e0e0;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* HEADER */
+    header {
+      background: var(--navy);
+      padding: 18px 20px 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    header svg { color: var(--gold); flex-shrink: 0; }
+    .header-brand {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: #aab4c8;
+    }
+    .header-title {
+      font-family: 'Merriweather', serif;
+      font-size: 17px;
+      color: var(--white);
+      font-weight: 700;
+      margin-top: 1px;
+    }
+
+    /* CONTENT */
+    .content {
+      padding: 20px 16px 40px;
+      max-width: 480px;
+      margin: 0 auto;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    /* LOGIN CARD */
+    .card {
+      background: var(--white);
+      border-radius: 4px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+      padding: 34px 20px;
+      text-align: center;
+    }
+
+    .icon-box {
+      width: 64px;
+      height: 64px;
+      background: rgba(13, 27, 62, 0.04);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--navy);
+      margin: 0 auto 20px;
+    }
+
+    h1 {
+      font-family: 'Merriweather', serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+
+    p {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.5;
+      margin-bottom: 28px;
+    }
+
+    /* INPUT STYLING */
+    .input-group {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      max-width: 280px;
+      margin: 0 auto;
+    }
+
+    input {
+      padding: 14px;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      font-family: 'Lato', sans-serif;
+      font-size: 16px;
+      text-align: center;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    input:focus {
+      border-color: var(--navy);
+      box-shadow: 0 0 0 2px rgba(13, 27, 62, 0.05);
+    }
+
+    .btn-login {
+      background: var(--navy);
+      color: var(--white);
+      border: none;
+      padding: 14px;
+      border-radius: 4px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 13px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .btn-login:active {
+      background: #1a2a5a;
+      transform: scale(0.98);
+    }
+
+    .footer-note {
+      margin-top: 30px;
+      font-size: 11px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+    <circle cx="12" cy="7" r="4"/>
+  </svg>
+  <div class="header-text">
+    <div class="header-brand">TSV Volleyball</div>
+    <div class="header-title">Konto-Login</div>
+  </div>
+</header>
+
+<div class="content">
+  <div class="card">
+    <div class="icon-box">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="5" width="20" height="14" rx="2" ry="2"/>
+        <line x1="6" y1="9" x2="6" y2="9"/><line x1="10" y1="9" x2="10" y2="9"/>
+        <line x1="14" y1="9" x2="14" y2="9"/><line x1="18" y1="9" x2="18" y2="9"/>
+        <line x1="6" y1="13" x2="6" y2="13"/><line x1="10" y1="13" x2="10" y2="13"/>
+        <line x1="14" y1="13" x2="14" y2="13"/><line x1="18" y1="13" x2="18" y2="13"/>
+        <line x1="8" y1="17" x2="16" y2="17"/>
+      </svg>
+    </div>
+    
+    <h1>Willkommen</h1>
+    <p>Bitte gib deine ID ein, um zu deinem Konto zu gelangen.</p>
+
+    <div class="input-group">
+      <input type="text" id="userId" placeholder="Nutzer-ID eingeben" autofocus>
+      <button class="btn-login" onclick="login()">Anmelden</button>
+    </div>
+
+    <div class="footer-note">Manueller Zugriff</div>
+  </div>
+</div>
+
+<script>
+  function login() {
+    const id = document.getElementById('userId').value.trim();
+    if (id) {
+      window.location.href = `http://localhost:3000/konto.html?id=${id}`;
+    } else {
+      alert("Bitte eine gültige ID eingeben.");
+    }
+  }
+
+  // Erlaubt das Absenden mit der Enter-Taste
+  document.getElementById('userId').addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') login();
+  });
+</script>
+
+</body>
+</html>
